@@ -3,12 +3,13 @@ import PackageDescription
 
 let package = Package(
     name: "github-release-tool",
+    platforms: [.macOS(.v13)],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0"),
     ],
     targets: [
         .executableTarget(
-            name: "GitHubReleaseTool",
+            name: "GithubReleaseTool",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
